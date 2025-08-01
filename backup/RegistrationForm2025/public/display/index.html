@@ -43,109 +43,20 @@
             const page_no = document.querySelector(".page > span");
             const next_page = document.querySelector(".next_page");
 
-            fetch("/display", {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                body: JSON.stringify({
-                    page: 1
-                })
-            })
-            .then(response => response.json())
-            .then(response => {
-                var data = response.data;
-                const headings = [
-                    "name",
-                    "email",
-                    "event",
-                    "paymentScreenshot",
-                    "timestamp"
-                ];
-                const normal_headings = [
-                    "Name",
-                    "Email",
-                    "Event",
-                    "Payment Screenshot",
-                    "Timestamp"
-                ];
-                table.innerHTML = "";
-                const head_row = table.insertRow();
-                normal_headings.forEach(heading => {
-                    const new_th = document.createElement("th");
-                    new_th.appendChild(document.createTextNode(heading));
-                    head_row.appendChild(new_th);
-                });
-                data.forEach(ob => {
-                    const new_row = table.insertRow();
-                    headings.forEach(heading => {
-                        const new_cell = new_row.insertCell();
-                        new_cell.appendChild(document.createTextNode(ob[heading]));
-                    });
-                });
-                page_no.textContent = "1";
-            });
-            
-            next_page.onclick = () => {
-                const current_page = parseInt(page_no.textContent);
-                var new_page = current_page + 1;
-                fetch("/display", {
-                    method: "POST",
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify({
-                        page: current_page + 1
-                    })
-                })
-                .then(response => response.json())
-                .then(response => {
-                    var data = response.data;
-                    new_page = response.page;
-                    if (data.length == 0) {
-                        return;
-                    }
-                    const headings = [
-                        "name",
-                        "email",
-                        "event",
-                        "paymentScreenshot",
-                        "timestamp"
-                    ];
-                    const normal_headings = [
-                        "Name",
-                        "Email",
-                        "Event",
-                        "Payment Screenshot",
-                        "Timestamp"
-                    ];
-                    table.innerHTML = "";
-                    const head_row = table.insertRow();
-                    normal_headings.forEach(heading => {
-                        const new_th = document.createElement("th");
-                        new_th.appendChild(document.createTextNode(heading));
-                        head_row.appendChild(new_th);
-                    });
-                    data.forEach(ob => {
-                        const new_row = table.insertRow();
-                        headings.forEach(heading => {
-                            const new_cell = new_row.insertCell();
-                            new_cell.appendChild(document.createTextNode(ob[heading]));
-                        });
-                    });
-                    page_no.textContent = new_page;
-                });
-            };
+            next_page.onclick = () => turnPage(parseInt(page_no.textContent) + 1);
+            prev_page.onclick = () => turnPage(parseInt(page_no.textContent) - 1);
 
-            prev_page.onclick = () => {
-                const current_page = parseInt(page_no.textContent);
-                var new_page = current_page - 1;
+            function turnPage(new_page) {
                 fetch("/display", {
                     method: "POST",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({
-                        page: current_page - 1
+                        page: new_page
                     })
                 })
                 .then(response => response.json())
                 .then(response => {
-                    var data = response.data;
+                    const {last_page, data} = response;
                     new_page = response.page;
                     const headings = [
                         "name",
@@ -175,9 +86,11 @@
                             new_cell.appendChild(document.createTextNode(ob[heading]));
                         });
                     });
-                    page_no.textContent = new_page;
+                    page_no.textContent = `${new_page} / ${last_page}`
                 });
-            };
+            }
+
+            turnPage(1);
         </script>
     </body>
 </html>
