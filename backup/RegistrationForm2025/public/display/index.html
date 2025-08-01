@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #e0e0e0;
+            }
+
+            table {
+                background-color: inherit;
+                color: #1f1f1f;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid #1f1f1f;
+            }
+
+            .page {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .page > span {
+                display: inline-block;
+                width: fit-content;
+                height: fit-content;
+                padding: 2px 7px;
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="table"></table>
+        <div class="page">
+            <input class="prev_page" type="button" value="&lt;">
+            <span></span>
+            <input class="next_page" type="button" value="&gt;">
+        </div>
+        <script>
+            const table = document.querySelector(".table");
+            const prev_page = document.querySelector(".prev_page");
+            const page_no = document.querySelector(".page > span");
+            const next_page = document.querySelector(".next_page");
+
+            fetch("/display", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({
+                    page: 1
+                })
+            })
+            .then(response => response.json())
+            .then(response => {
+                var data = response.data;
+                const headings = [
+                    "name",
+                    "email",
+                    "event",
+                    "paymentScreenshot",
+                    "timestamp"
+                ];
+                const normal_headings = [
+                    "Name",
+                    "Email",
+                    "Event",
+                    "Payment Screenshot",
+                    "Timestamp"
+                ];
+                table.innerHTML = "";
+                const head_row = table.insertRow();
+                normal_headings.forEach(heading => {
+                    const new_th = document.createElement("th");
+                    new_th.appendChild(document.createTextNode(heading));
+                    head_row.appendChild(new_th);
+                });
+                data.forEach(ob => {
+                    const new_row = table.insertRow();
+                    headings.forEach(heading => {
+                        const new_cell = new_row.insertCell();
+                        new_cell.appendChild(document.createTextNode(ob[heading]));
+                    });
+                });
+                page_no.textContent = "1";
+            });
+            
+            next_page.onclick = () => {
+                const current_page = parseInt(page_no.textContent);
+                var new_page = current_page + 1;
+                fetch("/display", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({
+                        page: current_page + 1
+                    })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    var data = response.data;
+                    new_page = response.page;
+                    if (data.length == 0) {
+                        return;
+                    }
+                    const headings = [
+                        "name",
+                        "email",
+                        "event",
+                        "paymentScreenshot",
+                        "timestamp"
+                    ];
+                    const normal_headings = [
+                        "Name",
+                        "Email",
+                        "Event",
+                        "Payment Screenshot",
+                        "Timestamp"
+                    ];
+                    table.innerHTML = "";
+                    const head_row = table.insertRow();
+                    normal_headings.forEach(heading => {
+                        const new_th = document.createElement("th");
+                        new_th.appendChild(document.createTextNode(heading));
+                        head_row.appendChild(new_th);
+                    });
+                    data.forEach(ob => {
+                        const new_row = table.insertRow();
+                        headings.forEach(heading => {
+                            const new_cell = new_row.insertCell();
+                            new_cell.appendChild(document.createTextNode(ob[heading]));
+                        });
+                    });
+                    page_no.textContent = new_page;
+                });
+            };
+
+            prev_page.onclick = () => {
+                const current_page = parseInt(page_no.textContent);
+                var new_page = current_page - 1;
+                fetch("/display", {
+                    method: "POST",
+                    headers: {"Content-Type": "application/json"},
+                    body: JSON.stringify({
+                        page: current_page - 1
+                    })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    var data = response.data;
+                    new_page = response.page;
+                    const headings = [
+                        "name",
+                        "email",
+                        "event",
+                        "paymentScreenshot",
+                        "timestamp"
+                    ];
+                    const normal_headings = [
+                        "Name",
+                        "Email",
+                        "Event",
+                        "Payment Screenshot",
+                        "Timestamp"
+                    ];
+                    table.innerHTML = "";
+                    const head_row = table.insertRow();
+                    normal_headings.forEach(heading => {
+                        const new_th = document.createElement("th");
+                        new_th.appendChild(document.createTextNode(heading));
+                        head_row.appendChild(new_th);
+                    });
+                    data.forEach(ob => {
+                        const new_row = table.insertRow();
+                        headings.forEach(heading => {
+                            const new_cell = new_row.insertCell();
+                            new_cell.appendChild(document.createTextNode(ob[heading]));
+                        });
+                    });
+                    page_no.textContent = new_page;
+                });
+            };
+        </script>
+    </body>
+</html>
