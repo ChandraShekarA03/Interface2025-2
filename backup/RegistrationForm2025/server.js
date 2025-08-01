@@ -17,6 +17,8 @@ app.use(express.json());
 // Serve static files (HTML, CSS, JS) from 'public' folder
 app.use(express.static(path.join(__dirname, "public")));
 
+// app.use((req, res, next) => setTimeout(next, 1000)); // to test with latency
+
 // Set up Multer for file uploads
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
@@ -97,6 +99,7 @@ app.post("/display", (req, res) => {
 		const end = start + 10;
 		data = data.slice(start, end);
 		var response = {
+			last_page: last_page,
 			page: page,
 			data: data
 		};
