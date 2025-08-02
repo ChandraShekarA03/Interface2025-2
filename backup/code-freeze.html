@@ -1,82 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Event Registration - Interface 2025</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
-      color: white;
-      font-family: 'Orbitron', sans-serif;
-    }
-    .btn-glow {
-      background: linear-gradient(to right, #9f4ef2, #4adede);
-      box-shadow: 0 0 10px #4adede;
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col items-center py-12 px-4">
+<!-- Updated HTML for Code Auction 2.0 -->
+<html>
+  <head>
+    <title>Code Auction 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fade: "fadeIn 1.5s ease-out",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-image: url("assests/TECHBG.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans">
+    <div class="max-w-6xl mx-auto py-10 px-4 animate-fade">
+      <header>
+        <div class="logo">
+          <a href="home.html">INTERFACE 2025</a>
+        </div>
+        <nav class="nav-items">
+          <a href="home.html">HOME</a>
+          <a href="#about-section">ABOUT US</a>
+          <a href="#Events">EVENTS</a>
+          <a href="results.html">RESULTS</a>
+          <a href="Schedule_Page.html">SCHEDULE</a>
+          <div class="dropdown">
+            <a href="#">MORE ▾</a>
+            <div class="dropdown-content">
+              <a href="register.html">REGISTER</a>
+              <a href="gallery.html">GALLERY</a>
+              <a href="#contact">CONTACT</a>
+              <a href="#Team">TEAM</a>
+              <a href="admin.html">Admin</a>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-  <h1 class="text-4xl md:text-5xl font-bold text-center text-white mb-10">INTERFACE 2025 REGISTRATIONS</h1>
+      <!-- Event Header -->
+      <div
+        class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] mt-10 rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500"
+      >
+        <p
+          class="text-sm text-sky-400 font-semibold uppercase tracking-wide"
+        >
+          Technical Event
+        </p>
+        <h1
+          class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float"
+        >
+          Code Auction 2.0
+        </h1>
+        <p class="text-gray-300 text-lg max-w-3xl">
+          Code Auction 2.0 is a dynamic, strategy-infused technical event where logic meets adrenaline. Teams participate in a live auction to bid on buggy code snippets and limited debugging tools. Once the gavel drops, the real challenge begins – fixing the code under strict time limits to earn maximum points.
+        </p>
+        <p class="text-gray-300 text-lg mt-4">
+          It’s a high-stakes blend of auction tactics, code analysis, and pressure-driven problem solving. Make smart investments, identify valuable snippets, and strike the perfect balance between risk and reward to dominate the leaderboard.
+        </p>
+        <button
+          class="mt-6 px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-400 text-white rounded-full text-sm font-semibold uppercase tracking-wide hover:scale-105 transition-transform duration-300"
+        >
+          Register Now
+        </button>
+      </div>
 
-  <!-- Technical Events -->
-  <section class="w-full max-w-6xl mb-16">
-    <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">TECHNICAL EVENTS</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Code Auction -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">Code Auction</h3>
-        <p class="text-sm mb-4 text-gray-200">Code Auction 2.0 is a dynamic, strategy-infused technical event where logic meets adrenaline.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScGLVT2EToRrPDEVz-3CJoskRX1BeHcS3Obx9KyxxTQBBpiig/viewform?usp=dialog" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      <!-- Event Details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500"
+        >
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">
+            Event Information
+          </h2>
+          <p><span class="text-sky-400 font-semibold">Duration:</span> <span class="text-gray-300">3 hours</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Team Size:</span> <span class="text-gray-300">2–3 participants per team</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Max Teams:</span> <span class="text-gray-300">10–15 (based on time & space)</span></p>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500"
+        >
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">
+            Event Structure & Flow
+          </h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+            <li><strong>Round 1: The Debug Hunt</strong> – Solve buggy code to unlock clues. Find hidden markers and earn virtual bidding points.</li>
+            <li><strong>Round 2: Auction & Access</strong> – Bid using virtual points to solve coding challenges. Code must be debugged for points.</li>
+            <li><strong>Round 3: Double or Nothing</strong> – Final risk round. Score may double… or drop to zero!</li>
+          </ul>
+        </div>
       </div>
-      <!-- HackPulse -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">HackPulse</h3>
-        <p class="text-sm mb-4 text-gray-200">HackPulse CTF is a thrilling, offline cybersecurity competition built around the Capture The Flag (CTF) format.</p>
-        <a href="https://forms.gle/QtSvgnF2EzdxceeZ6" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+
+      <!-- Judging + Guidelines -->
+      <div
+        class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500"
+      >
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">Judging Criteria</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Technical Accuracy</li>
+          <li>Code Efficiency</li>
+          <li>Auction Strategy and Budget Use</li>
+          <li>Debugging Speed</li>
+          <li>Team Coordination</li>
+        </ul>
       </div>
-      <!-- Code Freezex -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">Code Freezex</h3>
-        <p class="text-sm mb-4 text-gray-200">The Logic Lockdown is a fast-paced, logic-centric coding escape room.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJj6BUDJyTACBqk9McQS6SYnEsBFPhskJmHHVT7--1P5-MLA/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+
+      <!-- Guidelines -->
+      <div
+        class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500"
+      >
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">Guidelines</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Bring personal laptops with code editor installed</li>
+          <li>Maintain discipline and follow time slots strictly</li>
+          <li>Valid student ID is mandatory</li>
+          <li>Decisions by organizers will be final</li>
+        </ul>
+      </div>
+
+      <!-- Team -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+        <div
+          class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500"
+        >
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Heads</h2>
+          <div class="bg-[#1e293b] p-4 rounded-lg mb-4 hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">Rahul Sharma</p>
+            <p class="text-sm text-blue-300">rahul.sharma@example.com</p>
+            <p class="text-sm text-blue-300">+91 98765 43210</p>
+          </div>
+          <div class="bg-[#1e293b] p-4 rounded-lg hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">Priya Gupta</p>
+            <p class="text-sm text-blue-300">priya.gupta@example.com</p>
+            <p class="text-sm text-blue-300">+91 98765 43211</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500"
+        >
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Volunteers</h2>
+          <ul class="text-gray-300 space-y-2 text-sm list-disc list-inside">
+            <li>5–6 student volunteers</li>
+            <li>Will assist with code setup, auction tracking, and timekeeping</li>
+            <li>Report to event heads for task allocation</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Non-Technical Events -->
-  <section class="w-full max-w-6xl mb-10">
-    <h2 class="text-3xl text-center text-pink-400 font-bold mb-8">NON-TECHNICAL EVENTS</h2>
-    <div class="grid md:grid-cols-4 gap-8">
-      <!-- Techopoly -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">Techopoly</h3>
-        <p class="text-sm mb-4 text-gray-200">High-energy, life-sized board game inspired by Monopoly, where strategy meets tech!</p>
-        <a href="https://docs.google.com/forms/d/1-B0geEgV4_eOnW89GDg_D-179K1P9-ZaTaR3lsryrQM/edit" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
-      </div>
-      <!-- Hijingo -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">Hijingo</h3>
-        <p class="text-sm mb-4 text-gray-200">An interactive, competitive team-based bingo event that blends classic gameplay.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7owL2sCE4-cku_3Z9pVJk4zwFGUfwIQp483ipHPZ7H00cew/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
-      </div>
-      <!-- Lost Artifact -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">The Lost Artifact</h3>
-        <p class="text-sm mb-4 text-gray-200">Test your knowledge in the ultimate tech trivia championship.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8VIxAYpAxy99OyVOElg18p3BB1sIHs5iWMRBbtf6kfVtyYA/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
-      </div>
-      <!-- Cypheria -->
-      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
-        <h3 class="text-xl font-bold mb-2">Cypheria: A Valorant Showdown!</h3>
-        <p class="text-sm mb-4 text-gray-200">Valorant is a 5v5 tactical shooter where teams compete in intense, strategic battles.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf9gD7r413UnLmo_9a6198q6F4J4zI83R0Hwa_891cH2GdokA/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
-      </div>
-    </div>
-  </section>
-
-</body>
+  </body>
 </html>
