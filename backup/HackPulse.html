@@ -1,10 +1,10 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Lost Artifact</title>
+  <title>HackPulse CTF</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,7 +31,7 @@
   </script>
   <style>
     body{
-        background-image: url('assests/nontechbg.gif');
+        background-image: url('assests/TECHBG.gif');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -81,20 +81,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
     <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
-  <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">Non-Tech Event</p>
-  <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float" style="font-family: 'Orbitron', sans-serif;">The Lost Artifact</h1>
+  <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">Technical Event</p>
+  <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float" style="font-family: 'Orbitron', sans-serif;">HackPulse CTF</h1>
   <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
-    The Lost Artifact is an immersive, real-time escape room experience designed to transport participants into the heart of an archaeological adventure. The setting is a detailed recreation of ancient temple ruins, cleverly constructed within a university archaeology lab. Participants, acting as codebreaking archaeologists, must collaboratively unravel mysteries and recover a legendary artifact before the lab's chamber goes into lockdown.
+    HackPulse CTF is a thrilling, offline cybersecurity competition built around the Capture The Flag (CTF) format. Participants will face real-time challenges across multiple domains, including:
   </p>
+  <ul class="list-disc list-inside text-gray-300 text-lg max-w-3xl mt-2" style="font-family: 'Times New Roman', serif;">
+    <li>Cryptography</li>
+    <li>Web Exploitation</li>
+    <li>Reverse Engineering</li>
+    <li>Digital Forensics</li>
+  </ul>
+  <p class="text-gray-300 text-lg max-w-3xl mt-4" style="font-family: 'Times New Roman', serif;">
+    The goal: Capture digital flags hidden in each problem by breaking down vulnerabilities, decrypting secrets, and analyzing code.
+  </p>
+</div>
+
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-sky-700 transition duration-500">
+  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Event Format</h2>
+  <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
+    Offline CTF Event Plan using CTFd. We will host a fully offline Capture-The-Flag competition using CTFd for 60 teams (120 students) by leveraging three laptops and a TP-Link router to create an isolated network.
+  </p>
+  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">Setup Distribution:</h3>
+  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+    <li>Laptop 1: Hosts CTFd application and Docker containers for challenges</li>
+    <li>Laptop 2: Runs database (PostgreSQL with pgAdmin) and Redis for data management</li>
+    <li>Extra Laptop: Provides monitoring, backup support, and auxiliary tasks</li>
+    <li>TP-Link Router: Creates local Wi-Fi network for all 60 systems to connect simultaneously.</li>
+  </ul>
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
   <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
-    <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Event Details</h2>
+    <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Team Structure</h2>
     <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-      <li>Team Size: 3-5 participants</li>
-      <li>Duration: 30 minutes per team.</li>
-      <li>Number of Teams: Max 10</li>
+      <li>Team Size: 1–2 participants (MAX: 120 students)</li>
+      <li>Event Duration: 1.5 hours (90 minutes)</li>
+      <li>Organizing Team: 2 Event Heads + 6 Volunteers</li>
     </ul>
   </div>
 </div>
@@ -102,44 +125,26 @@
 <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
   <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Rules and Regulations</h2>
   <ul class="list-disc list-inside text-gray-300 space-y-3" style="font-family: 'Times New Roman', serif;">
-    <li>The escape room will have tasks that should be executed sequentially.</li>
-    <li>At the start of the event, only one participant from a team is allowed to enter, and with each task completed, another teammate will be allowed to enter.</li>
-    <li>If a participant is stuck on the first task for 5 minutes, then another participant will be allowed to enter.</li>
-    <li>On completing tasks, the teams will earn points.</li>
-    <li>The use of cellphones or any other electronic gadget is not allowed unless provided as a part of the challenge.</li>
-    <li>The decisions made by the organizing team are final and non-negotiable.</li>
-    <li>Any form of cheating will result in immediate disqualification.</li>
-    <li>A total of 3 hints will only be provided to the teams, and that too with time and point penalties.</li>
+    <li>Teams must solve challenges to capture flags.</li>
+    <li>Challenges vary in difficulty: beginner to advanced.</li>
+    <li>Internet access is strictly prohibited; only provided resources may be used.</li>
+    <li>External storage devices or tools are not permitted unless explicitly provided.</li>
+    <li>Any form of cheating or flag sharing leads to immediate disqualification.</li>
+    <li>Organizers’ decisions are final and binding.</li>
   </ul>
 </div>
 
 <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
   <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Judging Criteria</h2>
-  <h3 class="text-xl font-semibold text-sky-400 mb-2" style="font-family: 'Orbitron', sans-serif;">1. Time-Based Judging Criterion:</h3>
+  <h3 class="text-xl font-semibold text-sky-400 mb-2" style="font-family: 'Orbitron', sans-serif;">1. Point-Based Evaluation:</h3>
   <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-    <li>Lowest time to escape wins.</li>
-    <li>Teams are ranked primarily by how quickly they complete the entire challenge (escape the room).</li>
-    <li>In case of equal points, the team with the shortest completion time will be ranked higher.</li>
+    <li>Each challenge (flag) carries specific points based on difficulty.</li>
+    <li>Teams accumulate points by successfully solving and submitting flags via CTFd.</li>
   </ul>
-  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">2. Point-Based Judging Criterion:</h3>
+  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">2. Time-Based Tie-Breaker:</h3>
   <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-    <li>Points are awarded for each task completed:
-      <ul class="list-circle list-inside ml-5">
-        <li>Fully correct solution: 10 points per task</li>
-        <li>Partial solution: 5 points per task</li>
-        <li>Incorrect or incomplete: 0 points</li>
-      </ul>
-    </li>
-    <li>Deductions:
-      <ul class="list-circle list-inside ml-5">
-        <li>Each hint used: –5 points</li>
-      </ul>
-    </li>
-    <li>Total score is the sum of all task points, minus any hint penalties.</li>
+    <li>In case of a points tie, the team who reached the tied score first will be ranked higher.</li>
   </ul>
-  <p class="text-gray-300 text-xl mt-4" style="font-family: 'Times New Roman', serif;">
-    Summary: Teams should strive to finish all tasks accurately for maximum points, but the team with the lowest escape time will ultimately take precedence for ranking if scores are tied.
-  </p>
 </div>
 
 </body>

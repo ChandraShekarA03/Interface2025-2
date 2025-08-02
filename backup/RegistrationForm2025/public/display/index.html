@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <style>
@@ -9,6 +10,7 @@
                 background-color: inherit;
                 color: #1f1f1f;
                 border-collapse: collapse;
+                margin-bottom: 10px;
             }
 
             th, td {
@@ -19,32 +21,39 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: 7px;
             }
 
             .page > span {
                 display: inline-block;
                 width: fit-content;
                 height: fit-content;
-                padding: 2px 7px;
-                background-color: #f1f1f1;
+            }
+
+            .current_page_input {
+                width: 14px;
+                text-align: end;
             }
         </style>
     </head>
     <body>
         <table class="table"></table>
         <div class="page">
-            <input class="prev_page" type="button" value="&lt;">
-            <span></span>
-            <input class="next_page" type="button" value="&gt;">
+            <input class="prev_page_button" type="button" value="&lt;">
+            <input class="current_page_input" type="text">
+            <span>/ </span>
+            <span class="last_page_span"></span>
+            <input class="next_page_button" type="button" value="&gt;">
         </div>
         <script>
             const table = document.querySelector(".table");
-            const prev_page = document.querySelector(".prev_page");
-            const page_no = document.querySelector(".page > span");
-            const next_page = document.querySelector(".next_page");
+            const prev_page_button = document.querySelector(".prev_page_button");
+            const current_page_input = document.querySelector(".current_page_input");
+            const last_page_span = document.querySelector(".last_page_span");
+            const next_page_button = document.querySelector(".next_page_button");
 
-            next_page.onclick = () => turnPage(parseInt(page_no.textContent) + 1);
-            prev_page.onclick = () => turnPage(parseInt(page_no.textContent) - 1);
+            next_page_button.onclick = () => turnPage(parseInt(current_page_input.value) + 1);
+            prev_page_button.onclick = () => turnPage(parseInt(current_page_input.value) - 1);
 
             function turnPage(new_page) {
                 fetch("/display", {
@@ -86,9 +95,21 @@
                             new_cell.appendChild(document.createTextNode(ob[heading]));
                         });
                     });
-                    page_no.textContent = `${new_page} / ${last_page}`
+                    current_page_input.value = new_page;
+                    last_page_span.textContent = last_page;
                 });
             }
+
+            current_page_input.onkeypress = event => {
+                var charCode = (event.which) ? event.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                } else if (charCode === 13) {
+                    turnPage(parseInt(current_page_input.value));
+                }
+            }
+
+            current_page_input.onblur = () => turnPage(parseInt(current_page_input.value));
 
             turnPage(1);
         </script>
