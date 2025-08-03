@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bingo: Challenge Accepted</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: 'fadeIn 1.5s ease-out',
+            float: 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body{
+        background-image: url('assests/nontechbg.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+  </style>
+</head>
+<body  class="text-white font-sans">
+
+
+  <div class="max-w-6xl mx-auto py-10 px-4 animate-fade mt-10">
+    <header>
+            <div class="logo"><a href="home.html">INTERFACE 2025</div></a>
+            <nav class="nav-items">
+                <a href="home.html">HOME</a>
+                <a href="#about-section">ABOUT US</a>
+                <a href="#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>
+                <a href="Schedule_Page.html">SCHEDULE</a>
+
+                <div class="dropdown">
+                    <a href="#">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="register.html">REGISTER</a>
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="#contact">CONTACT</a>
+                        <a href="#Team">TEAM</a>
+                        <a href="admin.html">Admin</a>
+
+                        </div>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <a href="#">HOME</a>
+                <a href="#about-section">ABOUT US</a>
+                <a href="#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>
+                <a href="Schedule_Page.html">SCHEDULE</a>
+                <a href="#register">REGISTER</a>
+                <a href="#contact">CONTACT</a>
+                <a href="#Team">TEAM</a>
+            </div>
+            <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
+        </header>
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
+  <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">Non-tech Event</p>
+  <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float" style="font-family: 'Orbitron', sans-serif;">Bingo: Challenge Accepted or Hijingo</h1>
+  <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
+    An interactive, competitive team-based bingo event that blends classic gameplay with unpredictable twists, stealth challenges, and engaging mini-games.
+  </p>
+  <p class="text-gray-300 text-lg max-w-3xl mt-4" style="font-family: 'Times New Roman', serif;">
+    This is a dynamic spin on traditional bingo designed for team-building, laughter, and strategy. Participants form teams of 3, receive secret challenges, and compete across three bingo rounds: “C” pattern, “X” pattern, and Full House. Surprise mini-challenges and playful rule impositions inject chaos and creativity into each round.
+  </p>
+</div>
+
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Rules & Guidelines</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <h3 class="text-xl font-semibold text-blue-400 mb-2" style="font-family: 'Orbitron', sans-serif;">General Rules</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+        <li>Each team has 3 players.</li>
+        <li>Bingo numbers are called out sequentially.</li>
+        <li>Mini-challenges are introduced after every 15–20 calls.</li>
+        <li>Secret challenges must be completed subtly without being guessed.</li>
+        <li>Saying “bingo” or “hijingo” aloud results in penalties.</li>
+        <li>Final scores are based on points earned from bingo patterns, challenges, and behavior.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-semibold text-sky-400 mb-2" style="font-family: 'Orbitron', sans-serif;">Secret Challenges</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+        <li>Drawn by teams at the start.</li>
+        <li>Must be completed without detection.</li>
+        <li>If another team correctly guesses your challenge, they earn +2 points, and you lose 2 points.</li>
+      </ul>
+      <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">Mini Challenges</h3>
+      <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+        <li>One team member competes per challenge.</li>
+        <li>Winners earn +2 points and can strike any number on all team boards.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Rule Imposition Mechanism</h2>
+  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+    <li>Lowest-scoring team at the end of each round gets to create a quirky rule for other teams.</li>
+    <li>Rules must be lighthearted, fair, and host-approved.</li>
+    <li>Violating an imposed rule results in –2 points.</li>
+  </ul>
+  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">Example Rules:</h3>
+  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+    <li>Speak only through one designated team member.</li>
+    <li>Use nicknames only.</li>
+    <li>End every sentence with “Pikachu.”</li>
+    <li>No pointing allowed.</li>
+  </ul>
+</div>
+
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Judging Criteria</h2>
+  <table class="w-full text-left text-gray-300" style="font-family: 'Times New Roman', serif;">
+    <thead>
+      <tr class="border-b border-[#334155]">
+        <th class="py-2 text-blue-400">Category</th>
+        <th class="py-2 text-blue-400">Points Awarded</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="py-2">Bingo Pattern Completion</td>
+        <td class="py-2">+5 or +10</td>
+      </tr>
+      <tr>
+        <td class="py-2">Secret/Team Challenges</td>
+        <td class="py-2">+5</td>
+      </tr>
+      <tr>
+        <td class="py-2">Personal Challenges</td>
+        <td class="py-2">+3</td>
+      </tr>
+      <tr>
+        <td class="py-2">Mini Challenge Victory</td>
+        <td class="py-2">+2</td>
+      </tr>
+      <tr>
+        <td class="py-2">Saying “bingo/hijingo” aloud</td>
+        <td class="py-2">–1</td>
+      </tr>
+      <tr>
+        <td class="py-2">Rule Violation</td>
+        <td class="py-2">–2</td>
+      </tr>
+      <tr>
+        <td class="py-2">Secret Challenge Guessed by Others</td>
+        <td class="py-2">–2 (others earn +2)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="text-gray-300 text-lg mt-4" style="font-family: 'Times New Roman', serif;">
+    Winning Team: Highest total score after all rounds<br>
+    Tie-breaker: Bonus challenge to determine final winner
+  </p>
+</div>
+
+</body>
+</html>

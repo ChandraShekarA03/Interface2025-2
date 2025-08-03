@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Quest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: 'fadeIn 1.5s ease-out',
+            float: 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body{
+        background-image: url('assests/nontechbg.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+  </style>
+</head>
+<body  class="text-white font-sans">
+
+  <div class="max-w-6xl mx-auto py-10 px-4 animate-fade mt-10">
+    <!-- Header -->
+           <header>
+            <div class="logo"><a href="home.html">INTERFACE 2025</div></a>
+            <nav class="nav-items">
+                <a href="home.html">HOME</a>
+                <a href="#about-section">ABOUT US</a>
+                <a href="#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+                <div class="dropdown">
+                    <a href="#">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="register.html">REGISTER</a>
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="#contact">CONTACT</a>
+                        <a href="#Team">TEAM</a>
+                        <a href="admin.html">Admin</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <a href="#">HOME</a>
+                <a href="#about-section">ABOUT US</a>
+                <a href="#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+                <a href="#register">REGISTER</a>
+                <a href="#contact">CONTACT</a>
+                <a href="#Team">TEAM</a>
+            </div>
+            <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
+        </header>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Techopoly Event Card -->
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
+  <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">Non-Tech Event</p>
+  <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float" style="font-family: 'Orbitron', sans-serif;">Techopoly</h1>
+  <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
+    Techopoly is a high-energy, life-sized board game inspired by monopoly, where strategy meets tech! Teams compete across tech-themed zones by solving coding problems, puzzles, and logic challenges. Buy properties, earn TechCoins, and dominate the board using wit, teamwork, and tech knowledge.
+  </p>
+</div>
+
+<!-- Event Format -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+    <h2 class="text-2xl font-semibold text-blue-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Event Format</h2>
+    <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+      <li>Team Size: 3 participants</li>
+      <li>Duration: 120 minutes</li>
+      <li>No. of Teams: Max 8–9</li>
+    </ul>
+  </div>
+
+  <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+    <h2 class="text-2xl font-semibold text-blue-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Rules & Guidelines</h2>
+    <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
+      <li>Each team starts with 500 TechCoins</li>
+      <li>The board includes zones like Java Junction, Cybersecurity Circle, HTML Highway, etc.</li>
+      <li>Landing on a zone triggers a timed challenge (MCQ, puzzle, debugging)</li>
+      <li>Correct answer → buy the zone; Incorrect → move on</li>
+      <li>Rent applies if the zone is owned by another team</li>
+      <li>Special squares include Chance, Community Chest, and Math Jail</li>
+      <li>Teams earn coins by solving tasks and collecting rent</li>
+      <li>Completing a full board turn rewards +200 TechCoins</li>
+      <li>No phones or AI tools allowed; cheating leads to disqualification</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Judging Criteria -->
+<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+  <h2 class="text-2xl font-semibold text-blue-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Judging Criteria</h2>
+  <ul class="list-disc list-inside text-gray-300 space-y-3" style="font-family: 'Times New Roman', serif;">
+    <li><strong>Technical Accuracy</strong> – Correctness & clarity in solving challenges; grasp of core computer science concepts</li>
+    <li><strong>Problem Solving</strong> – Logical thinking under pressure; performance in debugging/time-bound tasks; innovative thinking</li>
+    <li><strong>Strategy & Resource Use</strong> – Smart spending & property acquisition; managing TechCoins and board control</li>
+    <li><strong>Teamwork</strong> – Role division, communication, coordination</li>
+  </ul>
+  <p class="text-gray-300 text-md mt-4" style="font-family: 'Times New Roman', serif;">
+    Winners will be decided based on final TechCoins, property value, and overall performance.
+  </p>
+</div>
+
+</body>
+</html>
