@@ -1,209 +1,208 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HackPulse CTF</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/Untitled%20design.webp">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          animation: {
-            fade: 'fadeIn 1.5s ease-out',
-            float: 'float 3s ease-in-out infinite',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: 0 },
-              '100%': { opacity: 1 },
+<!-- Updated HTML for HackPulse CTF: Crack. Capture. Conquer. -->
+<html>
+  <head>
+    <title>HackPulse CTF – Interface 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/Untitled%20design.webp">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fade: "fadeIn 1.5s ease-out",
+              float: "float 3s ease-in-out infinite",
             },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
             },
           },
         },
-      },
-    }
-  </script>
-  <style>
-    body{
-        background-image: url('http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/TECHBG.gif');
+      };
+    </script>
+    <style>
+      body {
+        background-image: url("http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/TECHBG.gif");
         background-size: cover;
-        background-position: center; 
+        background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
       }
-  </style>
-</head>
-<body  class="text-white font-sans">
-  <div class="max-w-6xl mx-auto py-10 px-4 animate-fade mt-10">
-           <header>
-                        <div class="logo"><a href="home.html">INTERFACE 2025</div></a>
-            <nav class="nav-items">
-                <a href="index.html">HOME</a>
-                <a href="registration2.html">REGISTER</a>
-                <a href="index.html#Events">EVENTS</a>
-                <a href="results.html">RESULTS</a>  
-                <a href="Schedule_Page.html">SCHEDULE</a>
-                <!-- Dropdown Container -->
-                <div class="dropdown">
-                    <a href="#">MORE ▾</a>
-                    <div class="dropdown-content">
-                        <a href="gallery.html">GALLERY</a>
-                        <a href="index.html#contact">CONTACT</a>
-                        <a href="index.html#Team">TEAM</a>                        
-                        <!-- Add more links as needed -->
-                    </div>
-                </div>
-            </nav>
-            <div class="hamburger-menu">
-                <a href="index.html">HOME</a>
-                <a href="registration2.html">REGISTER</a>
-                <a href="index.html#Events">EVENTS</a>
-                <a href="results.html">RESULTS</a>  
-                <a href="Schedule_Page.html">SCHEDULE</a>
-                <a href="index.html#contact">CONTACT</a>
-                <a href="index.html#Team">TEAM</a>
+    </style>
+  </head>
+  <body class="text-white font-sans">
+    <div class="max-w-6xl mx-auto py-10 px-4 animate-fade">
+      <header>
+        <div class="logo"><a href="home.html">INTERFACE 2025</a></div>
+        <nav class="nav-items">
+          <a href="index.html">HOME</a>
+          <a href="registration2.html">REGISTER</a>
+          <a href="index.html#Events">EVENTS</a>
+          <a href="results.html">RESULTS</a>  
+          <a href="Schedule_Page.html">SCHEDULE</a>
+          <div class="dropdown">
+            <a href="#">MORE ▾</a>
+            <div class="dropdown-content">
+              <a href="gallery.html">GALLERY</a>
+              <a href="index.html#contact">CONTACT</a>
+              <a href="index.html#Team">TEAM</a>
             </div>
-            <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
-        </header>
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-    <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
-  <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide" style="font-family: 'Orbitron', sans-serif;">Technical Event</p>
-  <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float" style="font-family: 'Orbitron', sans-serif;">HackPulse CTF</h1>
-  <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
-    HackPulse CTF is a thrilling, offline cybersecurity competition built around the Capture The Flag (CTF) format. Participants will face real-time challenges across multiple domains, including:</p>
-  <ul class="list-disc list-inside text-gray-300 text-lg max-w-3xl mt-2" style="font-family: 'Times New Roman', serif;">
-    <li>Cryptography</li>
-    <li>Web Exploitation</li>
-    <li>Reverse Engineering</li>
-    <li>Digital Forensics</li>
-  </ul>
-  <p class="text-gray-300 text-lg max-w-3xl mt-4" style="font-family: 'Times New Roman', serif;">
-    The goal: Capture digital flags hidden in each problem by breaking down vulnerabilities, decrypting secrets, and analyzing code.
-  </p>
-  <a href="https://forms.gle/QtSvgnF2EzdxceeZ6" target="_blank">
+          </div>
+        </nav>
+        <div class="hamburger-menu">
+          <a href="index.html">HOME</a>
+          <a href="registration2.html">REGISTER</a>
+          <a href="index.html#Events">EVENTS</a>
+          <a href="results.html">RESULTS</a>  
+          <a href="Schedule_Page.html">SCHEDULE</a>
+          <a href="index.html#contact">CONTACT</a>
+          <a href="index.html#Team">TEAM</a>
+        </div>
+        <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
+      </header>
+
+      <!-- Event Header -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] mt-10 rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
+        <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide">Technical Event</p>
+        <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float">HackPulse CTF </h1>
+        <p class="text-gray-300 text-lg max-w-3xl">
+          HackPulse CTF is a live, cybersecurity-based challenge that transforms participants into ethical hackers on a mission to uncover digital flags hidden inside virtual challenges. The competition tests logical reasoning, problem-solving, and technical prowess under pressure.
+        </p>
+        <p class="text-gray-300 text-lg mt-4">
+          Participants will face two rounds of increasing difficulty, with only the top performers progressing to the final stage. New to CTF? Capture The Flag is a fast-paced cybersecurity game where you exploit vulnerabilities, decrypt secrets, reverse binaries, and inspect forensic artifacts to grab hidden flags for points.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJj6BUDJyTACBqk9McQS6SYnEsBFPhskJmHHVT7--1P5-MLA/viewform?usp=header" target="_blank">
           <button class="mt-6 px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-400 text-white rounded-full text-sm font-semibold uppercase tracking-wide hover:scale-105 transition-transform duration-300">
             Register Now
           </button>
         </a>
-</div>
+      </div>
+
+      <!-- Event Snapshot -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Snapshot</h2>
+          <p><span class="text-sky-400 font-semibold">Team Size:</span> <span class="text-gray-300">1–2 participants per team</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Duration:</span> <span class="text-gray-300">120 minutes (2 rounds × 60 mins)</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Scoring:</span> <span class="text-gray-300">More points = higher rank</span></p>
+        </div>
+
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Why Join?</h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+            <li>Learn real hacking skills – crack codes, exploit websites, and solve digital mysteries using professional tools.</li>
+            <li>Beginner-friendly challenges with progressive difficulty.</li>
+            <li>Develop practical cybersecurity expertise and boost your career profile.</li>
+            <li>Earn recognition and rewards – top 2 teams win cash prizes.</li>
+          </ul>
+        </div>
+      </div>
 
 
-<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-sky-700 transition duration-500">
-  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Event Format</h2>
-  <p class="text-gray-300 text-lg max-w-3xl" style="font-family: 'Times New Roman', serif;">
-    Offline CTF Event Plan using CTFd. We will host a fully offline Capture-The-Flag competition using CTFd for 60 teams (120 students) by leveraging three laptops and a TP-Link router to create an isolated network.
-  </p>
-  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">Setup Distribution:</h3>
-  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-    <li>Laptop 1: Hosts CTFd application and Docker containers for challenges</li>
-    <li>Laptop 2: Runs database (PostgreSQL with pgAdmin) and Redis for data management</li>
-    <li>Extra Laptop: Provides monitoring, backup support, and auxiliary tasks</li>
-    <li>TP-Link Router: Creates local Wi-Fi network for all 60 systems to connect simultaneously.</li>
-  </ul>
-</div>
+      <!-- Rules -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">Rules at a Glance</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Access challenges via provided website URL.</li>
+          <li>Volunteers will monitor both online and offline for fairness (screen sharing mandatory).</li>
+          <li>Flag sharing = instant disqualification.</li>
+          <li>No phones or AI tools allowed during the rounds.</li>
+          <li>Flags must be submitted in the exact format specified (e.g., <code>flag{example}</code>).</li>
+        </ul>
+      </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-  <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
-    <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Team Structure</h2>
-    <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-      <li>Team Size: 1–2 participants (MAX: 120 students)</li>
-      <li>Event Duration: 1.5 hours (90 minutes)</li>
-      <li>Organizing Team: 2 Event Heads + 6 Volunteers</li>
-    </ul>
-  </div>
-</div>
+      <!-- Requirements -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">What to Bring</h2>
+        <ul class="text-gray-300 space-y-2 text-sm list-disc list-inside">
+          <li>Laptop device (one per team) with web browser</li>
+          <li>Your curiosity and teamwork spirit!</li>
+        </ul>
+      </div>
 
-<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
-  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Rules and Regulations</h2>
-  <ul class="list-disc list-inside text-gray-300 space-y-3" style="font-family: 'Times New Roman', serif;">
-    <li>Teams must solve challenges to capture flags.</li>
-    <li>Challenges vary in difficulty: beginner to advanced.</li>
-    <li>Internet access is strictly prohibited; only provided resources may be used.</li>
-    <li>External storage devices or tools are not permitted unless explicitly provided.</li>
-    <li>Any form of cheating or flag sharing leads to immediate disqualification.</li>
-    <li>Organizers’ decisions are final and binding.</li>
-  </ul>
-</div>
+     
+      
 
-<div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
-  <h2 class="text-2xl font-semibold text-purple-400 mb-4" style="font-family: 'Orbitron', sans-serif;">Judging Criteria</h2>
-  <h3 class="text-xl font-semibold text-sky-400 mb-2" style="font-family: 'Orbitron', sans-serif;">1. Point-Based Evaluation:</h3>
-  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-    <li>Each challenge (flag) carries specific points based on difficulty.</li>
-    <li>Teams accumulate points by successfully solving and submitting flags via CTFd.</li>
-  </ul>
-  <h3 class="text-xl font-semibold text-sky-400 mt-4 mb-2" style="font-family: 'Orbitron', sans-serif;">2. Time-Based Tie-Breaker:</h3>
-  <ul class="list-disc list-inside text-gray-300 space-y-2" style="font-family: 'Times New Roman', serif;">
-    <li>In case of a points tie, the team who reached the tied score first will be ranked higher.</li>
-  </ul>
-</div>
-<br>
-<footer class="bg-black text-white px-8 py-12">
-  <!-- Divider -->
-  <div class="mb-8 border-t border-gray-700"></div>
+      <!-- Team -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Heads</h2>
+          <div class="bg-[#1e293b] p-4 rounded-lg mb-4 hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">G. Vignesh</p>
+            <p class="text-sm text-blue-300">g.vignesh@bcah.christuniversity.in</p>
+            <p class="text-sm text-blue-300">+91 96118 57303</p>
+          </div>
+          <div class="bg-[#1e293b] p-4 rounded-lg hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">Dennis Mathew Abee</p>
+            <p class="text-sm text-blue-300">dennis.abee@bcah.christuniversity.in</p>
+            <p class="text-sm text-blue-300">+91 84949 44937</p>
+          </div>
+        </div>
 
-  <!-- Footer Grid -->
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm md:text-base">
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Get Ready - To Crack. Capture. Conquer.</h2>
+          <p class="text-gray-300 text-sm">
+            Ready to Capture the Flag and make your mark at Interface 2025? Bring your skills, your team, and let’s hack our way to victory!
+          </p>
+        </div>
+      </div>
+    </div>
 
- <!-- Contact Us -->
-  <div>
-    <h3 class="text-xl font-bold">Contact Us</h3>
-    <p class="mt-4 font-sans"><span class="font-semibold">Email:</span> interface@christuniversity.in</p>
-    <p class="font-sans"><span class="font-semibold">Phone:</span> <br>+91 70046 01014(Kapil Maheshwari),<br>
-                          +91 85901 28101 (Alisha Sajeev),<br>
-                          +91 84366 91479 (Utkarsh Thakur),<br>
-                          +91 96334 85168 (K S Sreya)</p>
-    <p class="font-sans mt-2">
-      <span class="font-semibold">Address:</span><br>
-      Christ (Deemed to be University)<br>
-      Hosur Road, Bangalore - 560029<br>
-      Karnataka, India
-    </p>
-     </div>
-
-  <!-- Event Info -->
-  <div>
-    <h3 class="text-xl font-bold">Event Info</h3>
-    <p class="mt-4 font-sans"><span class="font-semibold">Event Date:</span> August 23, 2025</p>
-    <p class="font-sans"><span class="font-semibold text-blue-500">( Onspot Registrations are available ) </span> </p>
-  </div>
-
-  <!-- Brochure -->
-  <div>
-    <h3 class="text-xl font-bold">Download Brochure</h3>
-    <a href="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/ifeventbrochure_compressed.pdf" class="inline-block mt-4 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-lg hover:from-purple-600 hover:to-blue-600 transition">DOWNLOAD PDF</a>
-  </div>
-
-  <!-- Event Summary -->
-  <div>
-    <h3 class="text-xl font-bold"><a href="#home">INTERFACE 2025–26</a></h3>
-    <p class="mt-4 font-sans">
-      National Level Intercollegiate IT Fest by Christ University’s Computer Science Department.<br>
-      Year of Gaming Theme – Where technology meets entertainment.
-    </p>
-  </div>
-</div>
-
-<!-- CHRIST Logo Centered -->
-<div class="w-full flex justify-center py-8">
-  <img src="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/christ Logo.webp" alt="CHRIST Logo" class="h-20 md:h-24">
-</div>
-
-  <!-- Copyright Section -->
-<div class="mt-12 text-center text-sm font-sans text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-pink-400">
-  <p>© 2025 INTERFACE, Department of Computer Science</p>
-  <p>CHRIST (Deemed to be University), Bangalore. All rights reserved.</p>
-</div>
-
-</footer>
-
-</body>
+    <!-- Footer -->
+    <footer class="bg-black text-white px-8 py-12">
+      <div class="mb-8 border-t border-gray-700"></div>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm md:text-base">
+        <div>
+          <h3 class="text-xl font-bold">Contact Us</h3>
+          <p class="mt-4 font-sans"><span class="font-semibold">Email:</span> interface@christuniversity.in</p>
+          <p class="font-sans"><span class="font-semibold">Phone:</span> <br>+91 70046 01014 (Kapil Maheshwari),<br>
+                            +91 85901 28101 (Alisha Sajeev),<br>
+                            +91 84366 91479 (Utkarsh Thakur),<br>
+                            +91 96334 85168 (K S Sreya)</p>
+          <p class="font-sans mt-2">
+            <span class="font-semibold">Address:</span><br>
+            Christ (Deemed to be University)<br>
+            Hosur Road, Bangalore - 560029<br>
+            Karnataka, India
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Event Info</h3>
+          <p class="mt-4 font-sans"><span class="font-semibold">Event Date:</span> August 23, 2025</p>
+          <p class="font-sans"><span class="font-semibold text-blue-500">( Onspot Registrations are available )</span></p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Download Brochure</h3>
+          <a href="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/ifeventbrochure_compressed.pdf" class="inline-block mt-4 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-lg hover:from-purple-600 hover:to-blue-600 transition">DOWNLOAD PDF</a>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold"><a href="#home">INTERFACE 2025–26</a></h3>
+          <p class="mt-4 font-sans">
+            National Level Intercollegiate IT Fest by Christ University’s Computer Science Department.<br>
+            Year of Gaming Theme – Where technology meets entertainment.
+          </p>
+        </div>
+      </div>
+      <div class="w-full flex justify-center py-8">
+        <img src="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/christ Logo.webp" alt="CHRIST Logo" class="h-20 md:h-24">
+      </div>
+      <div class="mt-12 text-center text-sm font-sans text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-pink-400">
+        <p>© 2025 INTERFACE, Department of Computer Science</p>
+        <p>CHRIST (Deemed to be University), Bangalore. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
