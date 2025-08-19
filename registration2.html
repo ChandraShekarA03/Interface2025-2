@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration - Interface 2025</title>
+      <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/Untitled%20design.webp">
+
+  <style>
+    body {
+      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .btn-glow {
+      background: linear-gradient(to right, #9f4ef2, #4adede);
+      box-shadow: 0 0 10px #4adede;
+    }
+  </style>
+      <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fade: "fadeIn 1.5s ease-out",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+</head>
+
+<body class="min-h-screen flex flex-col items-center py-12 px-4">
+           <header>
+            <div class="logo"><a href="home.html">INTERFACE 2025</div></a>
+            <nav class="nav-items">
+                <a href="index.html">HOME</a>
+                <a href="registration2.html">REGISTER</a>
+                <a href="index.html#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+
+                <!-- Dropdown Container -->
+                <div class="dropdown">
+                    <a href="#">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="index.html#contact">CONTACT</a>
+                        <a href="index.html#Team">TEAM</a>                        
+                        <!-- Add more links as needed -->
+                    </div>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <a href="index.html">HOME</a>
+                <a href="registration2.html">REGISTER</a>
+                <a href="index.html#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+                <a href="index.html#contact">CONTACT</a>
+                <a href="index.html#Team">TEAM</a>
+            </div>
+            <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
+        </header>
+
+  <h1 class="text-4xl md:text-5xl font-bold text-center text-white mt-12 mb-10">INTERFACE 2025 REGISTRATIONS</h1>
+<div id="notice" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+  <div class="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 max-w-2xl mx-4 shadow-lg text-white text-center">
+    <h2 class="text-2xl font-bold text-yellow-300 mb-4">NOTICE</h2>
+    <p class="mb-3">Fee created under the Head <strong>"FEST"</strong>. The link is activated and it will be closed End of day <strong>23rd August 2025</strong>.</p>
+    <p class="mb-3">Interface 2025-External: <strong>₹200 per person</strong></p>
+    <p class="mb-3">This is to inform that the option to pay fee via Debit card / Credit card / Internet banking / UPI is available on our website:</p>
+    <p class="text-cyan-300 mb-3">
+      <a href="http://christuniversity.in" target="_blank" class="underline">http://christuniversity.in</a> → Menu → E-services → Online Payment Portal → Central Campus → FEST → INTERFACE 2025 External
+    </p>
+    <p class="mb-3">Email ID updated: <strong>interface@cs.christuniversity.in</strong><br>As soon as a student pays, you will get a receipt via email.</p>
+    <button onclick="document.getElementById('notice').style.display='none'" class="mt-4 px-5 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg font-semibold">Close</button>
+  </div>
+</div>
+  <!-- Technical Events -->
+  <section class="w-full max-w-6xl mb-16">
+    <h2 class="text-3xl text-center text-cyan-400 font-bold mb-8">TECHNICAL EVENTS</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Code Auction -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">Code Auction</h3>
+        <p class="text-sm mb-4 text-gray-200">Code Auction 2.0 is a dynamic, strategy-infused technical event where logic meets adrenaline.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvpESTM3U0NOB4lyrTZaOLGUtwX-jBi4E0sPyAak3XjiIQog/viewform?usp=dialog" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+      <!-- HackPulse -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">HackPulse</h3>
+        <p class="text-sm mb-4 text-gray-200">HackPulse CTF is a thrilling, offline cybersecurity competition built around the Capture The Flag (CTF) format.</p>
+        <a href="https://forms.gle/QtSvgnF2EzdxceeZ6" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+      <!-- Code Freezex -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">Code Freezex</h3>
+        <p class="text-sm mb-4 text-gray-200">The Logic Lockdown is a fast-paced, logic-centric coding escape room.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJj6BUDJyTACBqk9McQS6SYnEsBFPhskJmHHVT7--1P5-MLA/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Non-Technical Events -->
+  <section class="w-full max-w-6xl mb-10">
+    <h2 class="text-3xl text-center text-pink-400 font-bold mb-8">NON-TECHNICAL EVENTS</h2>
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Techopoly -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">Techopoly</h3>
+        <p class="text-sm mb-4 text-gray-200">High-energy, life-sized board game inspired by Monopoly, where strategy meets tech!</p>
+        <a href="https://docs.google.com/forms/d/1-B0geEgV4_eOnW89GDg_D-179K1P9-ZaTaR3lsryrQM/edit" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+      <!-- Hijingo -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">Hijingo</h3>
+        <p class="text-sm mb-4 text-gray-200">An interactive, competitive team-based bingo event that blends classic gameplay.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7owL2sCE4-cku_3Z9pVJk4zwFGUfwIQp483ipHPZ7H00cew/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+      <!-- Lost Artifact -->
+      <div class="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-bold mb-2">The Lost Artifact</h3>
+        <p class="text-sm mb-4 text-gray-200">Test your knowledge in the ultimate tech trivia championship.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8VIxAYpAxy99OyVOElg18p3BB1sIHs5iWMRBbtf6kfVtyYA/viewform?usp=header" class="btn-glow text-black font-semibold px-4 py-2 rounded-full inline-block">Register</a>
+      </div>
+  </section>
+
+</body>
+</html>

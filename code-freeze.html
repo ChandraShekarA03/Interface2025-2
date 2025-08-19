@@ -1,0 +1,233 @@
+<!-- Updated HTML for Code Freeze: The Logic Lockdown -->
+<html>
+  <head>
+    <title>Code Freeze: The Logic Lockdown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/Untitled%20design.webp">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              fade: "fadeIn 1.5s ease-out",
+              float: "float 3s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-image: url("http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/TECHBG.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans">
+    <div class="max-w-6xl mx-auto py-10 px-4 animate-fade">
+           <header>
+            <div class="logo"><a href="home.html">INTERFACE 2025</div></a>
+            <nav class="nav-items">
+                <a href="index.html">HOME</a>
+                <a href="registration2.html">REGISTER</a>
+                <a href="index.html#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+
+                <!-- Dropdown Container -->
+                <div class="dropdown">
+                    <a href="#">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">GALLERY</a>
+                        <a href="index.html#contact">CONTACT</a>
+                        <a href="index.html#Team">TEAM</a>                        
+                        <!-- Add more links as needed -->
+                    </div>
+                </div>
+            </nav>
+            <div class="hamburger-menu">
+                <a href="index.html">HOME</a>
+                <a href="registration2.html">REGISTER</a>
+                <a href="index.html#Events">EVENTS</a>
+                <a href="results.html">RESULTS</a>  
+                <a href="Schedule_Page.html">SCHEDULE</a>
+                <a href="index.html#contact">CONTACT</a>
+                <a href="index.html#Team">TEAM</a>
+            </div>
+            <i class="fa-solid fa-bars hamburger-menu-toggle"></i>
+        </header>
+
+      <!-- Event Header -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] mt-10 rounded-xl p-6 mb-10 border border-[#334155] shadow-lg hover:shadow-purple-700 transition duration-500">
+        <p class="text-sm text-sky-400 font-semibold uppercase tracking-wide">Technical Event</p>
+        <h1 class="text-5xl text-purple-400 font-bold mt-2 mb-4 animate-float">Code Freeze: The Logic Lockdown</h1>
+        <p class="text-gray-300 text-lg max-w-3xl">
+          A fast-paced, logic-centric coding escape room where precision thinking meets immersive storytelling. Teams must solve logic bugs, decode traps, and debug their way through a frozen facility. It’s not just a coding challenge—it’s a battle of logic and flow staged as a multi-zone escape chamber.
+        </p>
+        <p class="text-gray-300 text-lg mt-4">
+          Each round increases in difficulty, advancing teams physically through zones. Think fast, decode smarter, and thaw your way to victory!
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJj6BUDJyTACBqk9McQS6SYnEsBFPhskJmHHVT7--1P5-MLA/viewform?usp=header" target="_blank">
+          <button class="mt-6 px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-400 text-white rounded-full text-sm font-semibold uppercase tracking-wide hover:scale-105 transition-transform duration-300">
+            Register Now
+          </button>
+        </a>
+      </div>
+
+      <!-- Event Details -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Information</h2>
+          <p><span class="text-sky-400 font-semibold">Team Size:</span> <span class="text-gray-300">3 participants per team</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Duration:</span> <span class="text-gray-300">90–100 minutes</span></p>
+          <p class="mt-2"><span class="text-sky-400 font-semibold">Organizers:</span> <span class="text-gray-300">2 Heads + 6–7 Volunteers</span></p>
+        </div>
+
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-sky-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Structure & Flow</h2>
+          <ul class="list-disc list-inside space-y-2 text-gray-300 text-sm">
+            <li><strong>Round 1: Logic Drift</strong> – 5 logic/code puzzles. 10 mins. Freeze Token (+30s). Top 10 advance.</li>
+            <li><strong>Round 2: Frozen Flow</strong> – 4 debugging/dry-run challenges. 15 mins. Freeze Token (+45s). Top 7 advance.</li>
+            <li><strong>Round 3: Glacial Core</strong> – 6 hard logic + 1 bonus. 20 mins. No tokens. Top 5 advance.</li>
+            <li><strong>Round 4: Icebound Vault</strong> – Final 2 complex puzzles + trap. Manual. 10–12 mins. Winner based on sealed answers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Judging + Guidelines -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">Judging Criteria</h2>
+        <ul class="list-disc list-inside space-y-2 text-gray-300">
+          <li>Logical reasoning and debugging skill</li>
+          <li>Technical accuracy</li>
+          <li>Clarity in final puzzle answers</li>
+          <li>Overall problem-solving approach</li>
+        </ul>
+      </div>
+
+      <!-- Marking Scheme & Penalties -->
+      <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 mt-10 border border-[#334155] shadow hover:shadow-purple-700 transition duration-500">
+        <h2 class="text-2xl font-semibold text-purple-400 mb-4">Marking & Penalties</h2>
+        <ul class="text-gray-300 space-y-2 text-sm list-disc list-inside">
+          <li>Round 1: 5×2 = 10 marks</li>
+          <li>Round 2: 4×3 = 12 marks</li>
+          <li>Round 3: 6×3 + 10 (bonus) = 25 marks</li>
+          <li>Round 4: 2×7 + 10 (trap) = 24 marks</li>
+          <li>Penalties:
+            <ul class="ml-5 list-disc">
+              <li>Logic Slip (Easy): –1</li>
+              <li>Frostbite (Moderate): –2</li>
+              <li>Freeze Crack (Hard): –3</li>
+              <li>Ice Fault (Extreme): –5</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Team -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Event Heads</h2>
+          <div class="bg-[#1e293b] p-4 rounded-lg mb-4 hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">Rahul Sharma</p>
+            <p class="text-sm text-blue-300">rahul.sharma@example.com</p>
+            <p class="text-sm text-blue-300">+91 98765 43210</p>
+          </div>
+          <div class="bg-[#1e293b] p-4 rounded-lg hover:bg-[#334155] transition duration-300">
+            <p class="font-bold text-white">Priya Gupta</p>
+            <p class="text-sm text-blue-300">priya.gupta@example.com</p>
+            <p class="text-sm text-blue-300">+91 98765 43211</p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-[#0f172a] to-[#1e293b] rounded-xl p-6 border border-[#334155] shadow hover:shadow-blue-700 transition duration-500">
+          <h2 class="text-2xl font-semibold text-purple-400 mb-4">Volunteers</h2>
+          <ul class="text-gray-300 space-y-2 text-sm list-disc list-inside">
+            <li>6–7 student volunteers</li>
+            <li>Support with round setup, QR handling, and transitions</li>
+            <li>Report to heads for zone management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-black text-white px-8 py-12">
+  <!-- Divider -->
+  <div class="mb-8 border-t border-gray-700"></div>
+
+  <!-- Footer Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm md:text-base">
+
+ <!-- Contact Us -->
+  <div>
+    <h3 class="text-xl font-bold">Contact Us</h3>
+    <p class="mt-4 font-sans"><span class="font-semibold">Email:</span> interface@christuniversity.in</p>
+    <p class="font-sans"><span class="font-semibold">Phone:</span> <br>+91 70046 01014(Kapil Maheshwari),<br>
+                          +91 85901 28101 (Alisha Sajeev),<br>
+                          +91 84366 91479 (Utkarsh Thakur),<br>
+                          +91 96334 85168 (K S Sreya)</p>
+    <p class="font-sans mt-2">
+      <span class="font-semibold">Address:</span><br>
+      Christ (Deemed to be University)<br>
+      Hosur Road, Bangalore - 560029<br>
+      Karnataka, India
+    </p>
+     </div>
+
+  <!-- Event Info -->
+  <div>
+    <h3 class="text-xl font-bold">Event Info</h3>
+    <p class="mt-4 font-sans"><span class="font-semibold">Event Date:</span> August 23, 2025</p>
+    <p class="font-sans"><span class="font-semibold text-blue-500">( Onspot Registrations are available ) </span> </p>
+  </div>
+
+  <!-- Brochure -->
+  <div>
+    <h3 class="text-xl font-bold">Download Brochure</h3>
+    <a href="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/ifeventbrochure_compressed.pdf" class="inline-block mt-4 px-6 py-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold shadow-lg hover:from-purple-600 hover:to-blue-600 transition">DOWNLOAD PDF</a>
+  </div>
+
+  <!-- Event Summary -->
+  <div>
+    <h3 class="text-xl font-bold"><a href="#home">INTERFACE 2025–26</a></h3>
+    <p class="mt-4 font-sans">
+      National Level Intercollegiate IT Fest by Christ University’s Computer Science Department.<br>
+      Year of Gaming Theme – Where technology meets entertainment.
+    </p>
+  </div>
+</div>
+
+<!-- CHRIST Logo Centered -->
+<div class="w-full flex justify-center py-8">
+  <img src="http://raw.githubusercontent.com/NightFuryyyyy/Interface2025-Assets/refs/heads/main/christ Logo.webp" alt="CHRIST Logo" class="h-20 md:h-24">
+</div>
+
+  <!-- Copyright Section -->
+<div class="mt-12 text-center text-sm font-sans text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-pink-400">
+  <p>© 2025 INTERFACE, Department of Computer Science</p>
+  <p>CHRIST (Deemed to be University), Bangalore. All rights reserved.</p>
+</div>
+
+</footer>
+
+  </body>
+</html>
