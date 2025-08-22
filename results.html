@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +102,7 @@
             <td class="px-6 py-4">${escapeHTML(row["Winner(s)"])}</td>
             <td class="px-6 py-4">${escapeHTML(row["Department/College"])}</td>
             <td class="px-6 py-4">${escapeHTML(row["Category"])}</td>
-            <td class="px-6 py-4">${escapeHTML(row["Event Head / Contact"] || row["Event Head/Contact"] || row["Event Head & Contact"] || "")}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Contact / Event Head"] || "")}</td>
           `;
           tableBody.appendChild(tr);
         }
