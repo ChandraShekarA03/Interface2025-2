@@ -72,41 +72,57 @@
     <p class="text-center text-gray-400 mt-10 fade-in text-sm">*For certificate collection, contact your department coordinator*</p>
   </div>
 
-  <script>
-    const sheetURL = "https://opensheet.elk.sh/1GF9EpBtMn_xop90zVIZ7U1bIaafy8wEbUXYZtSS_IbM/Sheet1";
+<script>
+  const sheetURL = "https://opensheet.elk.sh/1GF9EpBtMn_xop90zVIZ7U1bIaafy8wEbUXYZtSS_IbM/Sheet1";
 
-    fetch(sheetURL)
-      .then(res => res.json())
-      .then(data => {
-        const tableBody = document.getElementById("resultBody");
-        tableBody.innerHTML = "";
+  // Escape special characters to prevent breaking HTML
+  function escapeHTML(str) {
+    if (!str) return "";
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 
-        data.forEach(row => {
-          if (row["Sl"]) {
-            const tr = document.createElement("tr");
-            tr.className = "hover:bg-green-700 transition duration-300";
-            tr.innerHTML = `
-              <td class="px-6 py-4">${row["Sl"]}</td>
-              <td class="px-6 py-4">${row["Event Name"]}</td>
-              <td class="px-6 py-4">${row["Winner(s)"]}</td>
-              <td class="px-6 py-4">${row["Department/College"]}</td>
-              <td class="px-6 py-4">${row["Category"]}</td>
-              <td class="px-6 py-4">${row["Event Head / Contact"]}</td>
-            `;
-            tableBody.appendChild(tr);
-          }
-        });
+  fetch(sheetURL)
+    .then(res => res.json())
+    .then(data => {
+      const tableBody = document.getElementById("resultBody");
+      tableBody.innerHTML = "";
+
+      data.forEach(row => {
+        if (row["Sl"]) {
+          const tr = document.createElement("tr");
+          tr.className = "hover:bg-green-700 transition duration-300";
+
+          tr.innerHTML = `
+            <td class="px-6 py-4">${escapeHTML(row["Sl"])}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Event Name"])}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Winner(s)"])}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Department/College"])}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Category"])}</td>
+            <td class="px-6 py-4">${escapeHTML(row["Event Head / Contact"] || row["Event Head/Contact"] || row["Event Head & Contact"] || "")}</td>
+          `;
+          tableBody.appendChild(tr);
+        }
       });
+    });
 
-    function searchTable() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const rows = document.querySelectorAll("#resultsTable tbody tr");
+  function searchTable() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const rows = document.querySelectorAll("#resultsTable tbody tr");
 
-      rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        row.style.display = text.includes(input) ? "" : "none";
-      });
-    }
-  </script>
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+</script>
+
+  <footer class="bg-gray-900 text-center text-white py-6 mt-10">
+    <p class="text-sm">&copy; 2025 INTERFACE. All rights reserved.</p>
+  </footer>
 </body>
 </html>
